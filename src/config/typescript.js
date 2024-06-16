@@ -1,4 +1,4 @@
-import { rules as base } from './base';
+import base from './base';
 import typescript from './rules/typescript';
 
 const shared = {
@@ -27,26 +27,30 @@ const shared = {
 
 const extensions = ['.js', '.mjs', '.cjs', '.jsx', '.ts', '.tsx', '.d.ts'];
 
-export default {
-  plugins: ['@typescript-eslint'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json'
-  },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+export default [
+  base,
+  {
+    files: ['**/*.js'],
+    plugins: ['@typescript-eslint',],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+      project: './tsconfig.json'
     },
-    'import/resolver': {
-      node: {
-        extensions
-      }
+    settings: {
+      'import/parsers': {
+        '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+      },
+      'import/resolver': {
+        node: {
+          extensions
+        }
+      },
+      'import/extensions': extensions,
+      'import/external-module-folders': ['node_modules', 'node_modules/@types'],
     },
-    'import/extensions': extensions,
-    'import/external-module-folders': ['node_modules', 'node_modules/@types'],
-  },
-  rules: {
-    ...Object.fromEntries(Object.entries(base).map(([k, v]) => [shared[k] ? shared[k] : k, v])),
-    ...typescript
-  }
-}
+    rules: {
+      ...Object.fromEntries(Object.keys(shared).map(key => [key, 'off'])),
+      ...Object.fromEntries(Object.entries(base.rules).map(([k, v]) => [shared[k] ? shared[k] : k, v])),
+      ...typescript
+    }
+  }]

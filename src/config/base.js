@@ -10,7 +10,9 @@ export const rules = {
   ...pluginImport
 };
 
+export const plugins = ['import'];
+
 export default {
-  plugins: ['import'],
+  plugins,
   rules
 };
