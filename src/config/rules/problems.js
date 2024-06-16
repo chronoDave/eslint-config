@@ -58,5 +58,5 @@ export default {
   'no-useless-backreference': 'error',
   'require-atomic-updates': 'error',
   'use-isnan': 'error',
-  'valid-typeof': 'error',
+  'valid-typeof': 'error'
 };

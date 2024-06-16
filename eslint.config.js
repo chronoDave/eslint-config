@@ -1,7 +1,7 @@
 import base, { env } from './dist/index.mjs';
 
 export default [
-  ...base,
+  base.configs.base,
   {
     languageOptions: {
       globals: {
@@ -9,4 +9,4 @@ export default [
       }
     }
   }
-]
+];

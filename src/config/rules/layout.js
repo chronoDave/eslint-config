@@ -1,3 +1,3 @@
 export default {
-  'unicode-bom': 'error',
+  'unicode-bom': 'error'
 };

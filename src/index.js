@@ -9,5 +9,5 @@ export default {
   configs: {
     base
   }
-}
+};
 // export { typescript };

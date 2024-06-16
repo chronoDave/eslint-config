@@ -2,7 +2,7 @@ export default {
   'import/prefer-default-export': 'off',
   'import/order': ['error', {
     'newlines-between': 'always-and-inside-groups',
-    groups: [
+    'groups': [
       'builtin',
       'external',
       'internal',
@@ -11,4 +11,4 @@ export default {
       'index'
     ]
   }]
-}
+};

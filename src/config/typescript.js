@@ -22,23 +22,24 @@ const shared = {
   'prefer-destructuring': '@typescript-eslint/prefer-destructuring',
   'prefer-promise-reject-errors': '@typescript-eslint/prefer-promise-reject-errors',
   'require-await': '@typescript-eslint/require-await',
-  'return-await': '@typescript-eslint/return-await',
+  'return-await': '@typescript-eslint/return-await'
 };
 
-const extensions = ['.js', '.mjs', '.cjs', '.jsx', '.ts', '.tsx', '.d.ts'];
+const extensions = [
+  '.js', '.mjs', '.cjs', '.jsx', '.ts', '.tsx', '.d.ts'
+];
 
-export default [
-  ...base,
+export default [...base,
   {
     name: '@chronocide/typescript',
     file: ['**/*.ts', '**/*.tsx'],
     plugins: ['@typescript-eslint'],
-    languageOptions : {
+    languageOptions: {
       parser: '@typescript-eslint/parser'
     },
     settings: {
       'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+        '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts']
       },
       'import/resolver': {
         node: {
@@ -46,11 +47,11 @@ export default [
         }
       },
       'import/extensions': extensions,
-      'import/external-module-folders': ['node_modules', 'node_modules/@types'],
+      'import/external-module-folders': ['node_modules', 'node_modules/@types']
     },
     rules: {
       ...Object.fromEntries(Object.keys(shared).map(key => [key, 'off'])),
       ...Object.fromEntries(Object.entries(base.rules).map(([k, v]) => [shared[k] ? shared[k] : k, v])),
       ...typescript
     }
-  }]
+  }];

@@ -103,7 +103,7 @@ export default {
   'no-undef-init': 'error',
   'no-undefined': 'error',
   'no-underscore-dangle': ['error', {
-    allowAfterThis: true,
+    allowAfterThis: true
   }],
   'no-unneeded-ternary': 'error',
   'no-unused-expressions': 'error',
@@ -146,5 +146,5 @@ export default {
   'strict': ['error', 'never'],
   'symbol-description': 'error',
   'vars-on-top': 'off',
-  'yoda': 'error',
+  'yoda': 'error'
 };
