@@ -1,4 +1,4 @@
-import base from './base';
+import * as base from './base';
 import typescript from './rules/typescript';
 
 const shared = {
@@ -28,13 +28,13 @@ const shared = {
 const extensions = ['.js', '.mjs', '.cjs', '.jsx', '.ts', '.tsx', '.d.ts'];
 
 export default [
-  base,
+  ...base,
   {
-    files: ['**/*.js'],
-    plugins: ['@typescript-eslint',],
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-      project: './tsconfig.json'
+    name: '@chronocide/typescript',
+    file: ['**/*.ts', '**/*.tsx'],
+    plugins: ['@typescript-eslint'],
+    languageOptions : {
+      parser: '@typescript-eslint/parser'
     },
     settings: {
       'import/parsers': {

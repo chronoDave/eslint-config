@@ -1,9 +1,7 @@
 import * as esbuild from 'esbuild';
 
 const base = {
-  entryPoints: [
-    'src/index.js'
-  ],
+  entryPoints: ['src/index.js'],
   outdir: 'dist',
   bundle: true,
   platform: 'node'
