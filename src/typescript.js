@@ -43,7 +43,7 @@ export default {
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
   rules: {
-    ...Object.fromEntries(Object.entries(base)).map(([k, v]) => [shared[k] ? shared[k] : k, v]),
+    ...Object.fromEntries(Object.entries(base).map(([k, v]) => [shared[k] ? shared[k] : k, v])),
     ...typescript
   }
 }
