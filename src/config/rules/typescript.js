@@ -1,6 +1,6 @@
 export default {
   '@typescript-eslint/adjacent-overload-signatures': 'error',
-  '@typescript-eslint/array-type': ['error', 'array-simple'],
+  '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
   '@typescript-eslint/await-thenable': 'error',
   '@typescript-eslint/ban-ts-comment': 'off',
   '@typescript-eslint/ban-tslint-comment': 'error',
