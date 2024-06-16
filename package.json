@@ -1,12 +1,12 @@
 {
   "name": "@chronocide/eslint-config",
   "version": "0.1.0",
-  "main": "dist/cfg.cjs",
-  "module": "dist/cfg.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "exports": {
     ".": {
-      "require": "./dist/cfg.cjs",
-      "import": "./dist/cfg.mjs"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
