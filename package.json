@@ -1,0 +1,33 @@
+{
+  "name": "@chronocide/eslint-config",
+  "version": "0.0.1",
+  "main": "dist/base.cjs",
+  "module": "dist/base.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/base.cjs",
+      "import": "./dist/base.mjs"
+    },
+    "./typescript": {
+      "require": "./dist/typescript.cjs",
+      "import": "./dist/typescript.mjs"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "author": "Chronocide",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "esbuild": "^0.21.5"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "eslint": "^8.57.0"
+  }
+}
