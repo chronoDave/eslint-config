@@ -5,5 +5,9 @@ import node from './env/node';
 
 export const env = { browser, node };
 
-export default [base];
+export default {
+  configs: {
+    base
+  }
+}
 // export { typescript };
