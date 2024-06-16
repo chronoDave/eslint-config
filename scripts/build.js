@@ -5,7 +5,9 @@ const base = {
   outdir: 'dist',
   bundle: true,
   external: [
-    '@stylistic/eslint-plugin-js'
+    '@stylistic/eslint-plugin-js',
+    '@stylistic/eslint-plugin-ts',
+    '@typescript-eslint/parser'
   ],
   platform: 'node'
 };
@@ -22,6 +24,6 @@ await esbuild.build({
   ...base,
   format: 'esm',
   outExtension: {
-    '.js': '.mjs',
+    '.js': '.mjs'
   }
 });

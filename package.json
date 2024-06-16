@@ -27,6 +27,8 @@
     "eslint": "^9.5.0"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin-js": "^2.2.0"
+    "@stylistic/eslint-plugin-js": "^2.2.0",
+    "@stylistic/eslint-plugin-ts": "^2.2.0",
+    "@typescript-eslint/parser": "^7.13.0"
   }
 }

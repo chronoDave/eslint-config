@@ -2,21 +2,17 @@ import problems from './rules/problems';
 import suggestions from './rules/suggestions';
 import layout from './rules/layout';
 
-import * as stylisticJs from './plugins/stylistic-js';
-
-export const rules = {
-  ...problems,
-  ...suggestions,
-  ...layout,
-  ...stylisticJs.rules
-};
-
-export const plugins = {
-  ...stylisticJs.plugins
-};
+import * as stylistic from './plugins/stylistic-js';
 
 export default {
   name: '@chronocide/base',
-  plugins,
-  rules
+  plugins: {
+    ...stylistic.plugins
+  },
+  rules: {
+    ...problems,
+    ...suggestions,
+    ...layout,
+    ...stylistic.rules
+  }
 };

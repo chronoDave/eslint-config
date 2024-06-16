@@ -7,9 +7,7 @@ export const plugins = {
 };
 
 export const rules = Object.fromEntries(Object.entries({
-  'array-bracket-newline': ['consistent', {
-    minItems: 4
-  }],
+  'array-bracket-newline': ['error', 'consistent'],
   'array-bracket-spacing': ['error', 'never'],
   'array-element-newline': ['error', 'consistent'],
   'arrow-parens': ['error', 'as-needed'],
