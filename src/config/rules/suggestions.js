@@ -75,7 +75,7 @@ export default {
   'no-multi-assign': 'error',
   'no-multi-str': 'error',
   'no-negated-condition': 'error',
-  'no-nested-ternary': 'error',
+  'no-nested-ternary': 'off',
   'no-new': 'error',
   'no-new-func': 'error',
   'no-new-wrappers': 'error',

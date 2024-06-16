@@ -1,16 +1,12 @@
 {
   "name": "@chronocide/eslint-config",
   "version": "0.0.2",
-  "main": "dist/base.cjs",
-  "module": "dist/base.mjs",
+  "main": "dist/cfg.cjs",
+  "module": "dist/cfg.mjs",
   "exports": {
     ".": {
-      "require": "./dist/base.cjs",
-      "import": "./dist/base.mjs"
-    },
-    "./typescript": {
-      "require": "./dist/typescript.cjs",
-      "import": "./dist/typescript.mjs"
+      "require": "./dist/cfg.cjs",
+      "import": "./dist/cfg.mjs"
     }
   },
   "files": [
@@ -29,6 +25,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1"
   }
 }

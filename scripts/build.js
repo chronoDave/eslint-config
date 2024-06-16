@@ -1,29 +1,26 @@
 import * as esbuild from 'esbuild';
 
-await esbuild.build({
+const base = {
   entryPoints: [
-    'src/base.js',
-    'src/typescript.js'
+    'src/index.js'
   ],
+  outdir: 'dist',
+  bundle: true,
+  platform: 'node'
+};
+
+await esbuild.build({
+  ...base,
   format: 'cjs',
   outExtension: {
     '.js': '.cjs'
-  },
-  outdir: 'dist',
-  bundle: true,
-  platform: 'node'
+  }
 });
 
 await esbuild.build({
-  entryPoints: [
-    'src/base.js',
-    'src/typescript.js'
-  ],
+  ...base,
   format: 'esm',
   outExtension: {
     '.js': '.mjs',
-  },
-  outdir: 'dist',
-  bundle: true,
-  platform: 'node'
+  }
 });
