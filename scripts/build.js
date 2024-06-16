@@ -4,6 +4,9 @@ const base = {
   entryPoints: ['src/index.js'],
   outdir: 'dist',
   bundle: true,
+  external: [
+    '@stylistic/eslint-plugin-js'
+  ],
   platform: 'node'
 };
 
