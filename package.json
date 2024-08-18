@@ -16,7 +16,7 @@
   "author": "Chronocide",
   "license": "CC0-1.0",
   "engines": {
-    "node": ">=21.1.0"
+    "node": ">=20.16.0"
   },
   "devDependencies": {
     "esbuild": "^0.21.5",
