@@ -262,10 +262,13 @@ var rules = Object.fromEntries(Object.entries({
   "max-statements-per-line": "error",
   "multiline-comment-style": "error",
   "multiline-ternary": "off",
-  "new-parens": ["error", "never"],
+  "new-parens": ["error", "always"],
   "newline-per-chained-call": "error",
   "no-confusing-arrow": ["error", { allowParens: true }],
-  "no-extra-parens": "error",
+  "no-extra-parens": ["error", "all", {
+    ignoreJSX: "multi-line",
+    enforceForArrowConditionals: false
+  }],
   "no-extra-semi": "error",
   "no-floating-decimal": "error",
   "no-mixed-operators": "error",
