@@ -1,4 +1,4 @@
-import stylistic from '@stylistic/eslint-plugin-js';
+import stylistic from '@stylistic/eslint-plugin-ts';
 
 const key = '@stylistic/ts';
 

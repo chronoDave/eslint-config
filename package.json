@@ -1,9 +1,9 @@
 {
   "name": "@chronocide/eslint-config",
   "version": "0.2.4",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "type": "module",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
@@ -12,13 +12,15 @@
   "files": [
     "dist/**/*"
   ],
-  "type": "module",
   "scripts": {
     "build": "node scripts/build.js",
     "prepublishOnly": "npm run build"
   },
   "author": "Chronocide",
   "license": "CC0-1.0",
+  "engines": {
+    "node": ">=21.1.0"
+  },
   "devDependencies": {
     "esbuild": "^0.21.5",
     "eslint": "^9.5.0"

@@ -52,7 +52,7 @@ export const rules = Object.fromEntries(Object.entries({
   'no-mixed-operators': 'error',
   'no-mixed-spaces-and-tabs': 'error',
   'no-multi-spaces': 'error',
-  'no-multiple-empty-lines': 'error',
+  'no-multiple-empty-lines': ['error', { max: 1 }],
   'no-tabs': 'error',
   'no-trailing-spaces': 'error',
   'no-whitespace-before-property': 'error',

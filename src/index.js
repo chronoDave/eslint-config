@@ -1,8 +1,7 @@
 import base from './config/base';
 import typescript from './config/typescript';
-
-import browser from './env/browser';
-import node from './env/node';
+import browser from './config/env/browser';
+import node from './config/env/node';
 
 export const env = { browser, node };
 

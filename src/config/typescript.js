@@ -5,11 +5,14 @@ import * as stylistic from './plugins/stylistic-ts';
 export default {
   name: '@chronocide/typescript',
   files: ['**/*.ts', '**/*.tsx'],
-  parser,
+  languageOptions: {
+    parser
+  },
   plugins: {
     ...stylistic.plugins
   },
   rules: {
-    ...stylistic.rules
+    ...stylistic.rules,
+    'no-console': 'error'
   }
 };
