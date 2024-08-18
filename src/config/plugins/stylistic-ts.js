@@ -19,7 +19,10 @@ export const rules = Object.fromEntries(Object.entries({
   'lines-around-comment': 'off',
   'lines-between-class-members': 'error',
   'member-delimiter-style': 'error',
-  'no-extra-parens': 'error',
+  'no-extra-parens': ['error', 'all', {
+    ignoreJSX: 'multi-line',
+    enforceForArrowConditionals: false
+  }],
   'no-extra-semi': 'error',
   'object-curly-spacing': 'off',
   'padding-line-between-statements': 'off',
