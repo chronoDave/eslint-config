@@ -4,10 +4,7 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    }
+    ".": "./dist/eslint-config.js"
   },
   "files": [
     "dist/**/*"

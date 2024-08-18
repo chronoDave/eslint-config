@@ -1,29 +1,14 @@
 import * as esbuild from 'esbuild';
 
-const base = {
+await esbuild.build({
   entryPoints: ['src/index.js'],
-  outdir: 'dist',
+  outfile: 'dist/eslint-config.js',
   bundle: true,
   external: [
     '@stylistic/eslint-plugin-js',
     '@stylistic/eslint-plugin-ts',
     '@typescript-eslint/parser'
   ],
-  platform: 'node'
-};
-
-await esbuild.build({
-  ...base,
-  format: 'cjs',
-  outExtension: {
-    '.js': '.cjs'
-  }
-});
-
-await esbuild.build({
-  ...base,
-  format: 'esm',
-  outExtension: {
-    '.js': '.mjs'
-  }
+  platform: 'node',
+  format: 'esm'
 });

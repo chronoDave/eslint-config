@@ -1,7 +1,7 @@
-import base, { env } from './dist/index.mjs';
+import base, { env } from './dist/eslint-config.js';
 
 export default [
-  base.configs.base,
+  base.configs.typescript,
   {
     languageOptions: {
       globals: {
