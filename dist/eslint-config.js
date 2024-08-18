@@ -355,13 +355,7 @@ var rules2 = Object.fromEntries(Object.entries({
   "key-spacing": "error",
   "keyword-spacing": "error",
   "lines-around-comment": "off",
-  "lines-between-class-members": ["error", {
-    enforce: [{
-      blankLine: "never",
-      prev: "method",
-      next: "method"
-    }]
-  }],
+  "lines-between-class-members": "off",
   "member-delimiter-style": "error",
   "no-extra-parens": ["error", "all", {
     ignoreJSX: "multi-line",
