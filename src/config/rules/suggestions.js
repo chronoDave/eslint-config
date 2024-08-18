@@ -8,7 +8,7 @@ export default {
   'complexity': ['error', 20],
   'consistent-return': 'error',
   'consistent-this': 'error',
-  'curly': ['error', 'multi-or-nest'],
+  'curly': ['error', 'multi-line'],
   'default-case': 'error',
   'default-case-last': 'error',
   'default-param-last': 'error',
