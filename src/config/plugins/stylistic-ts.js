@@ -17,7 +17,13 @@ export const rules = Object.fromEntries(Object.entries({
   'key-spacing': 'error',
   'keyword-spacing': 'error',
   'lines-around-comment': 'off',
-  'lines-between-class-members': 'error',
+  'lines-between-class-members': ['error', {
+    enforce: [{
+      blankLine: 'never',
+      prev: 'method',
+      next: 'method'
+    }]
+  }],
   'member-delimiter-style': 'error',
   'no-extra-parens': ['error', 'all', {
     ignoreJSX: 'multi-line',
