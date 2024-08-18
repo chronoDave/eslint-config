@@ -19,11 +19,11 @@
 **`eslint.config.js`**
 
 ```JS
-import base, { env } from './dist/eslint-config.js';
+import { configs, env } from './dist/eslint-config.js';
 
 export default [
-  base.configs.base,
-  // base.configs.typescript for TypeScript support
+  configs.base,
+  // configs.typescript for TypeScript support
   {
     languageOptions: {
       globals: {

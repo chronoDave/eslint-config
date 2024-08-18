@@ -6,6 +6,7 @@ import * as stylistic from './plugins/stylistic-js';
 
 export default {
   name: '@chronocide/base',
+  files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
   plugins: {
     ...stylistic.plugins
   },

@@ -4,10 +4,4 @@ import browser from './config/env/browser';
 import node from './config/env/node';
 
 export const env = { browser, node };
-
-export default {
-  configs: {
-    base,
-    typescript
-  }
-};
+export const configs = { base, typescript };

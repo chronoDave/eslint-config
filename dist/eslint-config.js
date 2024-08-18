@@ -316,6 +316,7 @@ var rules = Object.fromEntries(Object.entries({
 // src/config/base.js
 var base_default = {
   name: "@chronocide/base",
+  files: ["**/*.js", "**/*.mjs", "**/*.cjs"],
   plugins: {
     ...plugins
   },
@@ -1571,13 +1572,8 @@ var node_default = {
 
 // src/index.js
 var env = { browser: browser_default, node: node_default };
-var src_default = {
-  configs: {
-    base: base_default,
-    typescript: typescript_default
-  }
-};
+var configs = { base: base_default, typescript: typescript_default };
 export {
-  src_default as default,
+  configs,
   env
 };
