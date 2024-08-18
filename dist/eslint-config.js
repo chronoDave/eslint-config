@@ -297,7 +297,11 @@ var rules = Object.fromEntries(Object.entries({
   }],
   "semi-style": ["error", "last"],
   "space-before-blocks": ["error", "always"],
-  "space-before-function-paren": ["error", "never"],
+  "space-before-function-paren": ["error", {
+    anonymous: "never",
+    named: "never",
+    asyncArrow: "always"
+  }],
   "space-in-parens": ["error", "never"],
   "space-infix-ops": "error",
   "space-unary-ops": "error",
@@ -358,7 +362,11 @@ var rules2 = Object.fromEntries(Object.entries({
   "quotes": ["error", "single"],
   "semi": ["error", "always"],
   "space-before-blocks": ["error", "always"],
-  "space-before-function-paren": ["error", "never"],
+  "space-before-function-paren": ["error", {
+    anonymous: "never",
+    named: "never",
+    asyncArrow: "always"
+  }],
   "space-infix-ops": "error",
   "type-annotation-spacing": "error"
 }).map(([k, v]) => [`${key2}/${k}`, v]));

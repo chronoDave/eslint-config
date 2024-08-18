@@ -27,7 +27,11 @@ export const rules = Object.fromEntries(Object.entries({
   'quotes': ['error', 'single'],
   'semi': ['error', 'always'],
   'space-before-blocks': ['error', 'always'],
-  'space-before-function-paren': ['error', 'never'],
+  'space-before-function-paren': ['error', {
+    anonymous: 'never',
+    named: 'never',
+    asyncArrow: 'always'
+  }],
   'space-infix-ops': 'error',
   'type-annotation-spacing': 'error'
 }).map(([k, v]) => [`${key}/${k}`, v]));
