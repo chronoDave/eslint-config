@@ -25,7 +25,7 @@ export const rules = Object.fromEntries(Object.entries({
   'eol-last': 'error',
   'function-call-argument-newline': ['error', 'consistent'],
   'function-call-spacing': 'error',
-  'function-paren-newline': ['error', { minItems: 4 }],
+  'function-paren-newline': ['error', 'multiline'],
   'generator-star-spacing': ['error', {
     before: true,
     after: false
