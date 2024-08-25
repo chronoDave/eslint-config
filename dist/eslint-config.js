@@ -73,7 +73,7 @@ var suggestions_default = {
   "complexity": ["error", 20],
   "consistent-return": "error",
   "consistent-this": "error",
-  "curly": ["error", "multi-line"],
+  "curly": ["error", "multi-line", "consistent"],
   "default-case": "error",
   "default-case-last": "error",
   "default-param-last": "error",
