@@ -7,9 +7,13 @@ export default {
   name: '@chronocide/typescript',
   files: ['**/*.ts', '**/*.tsx'],
   languageOptions: {
-    parser
+    parser,
+    parserOptions: {
+      project: true
+    }
   },
   plugins: {
+    ...typescriptEslint.plugins,
     ...stylistic.plugins
   },
   rules: {

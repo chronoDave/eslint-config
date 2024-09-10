@@ -7,7 +7,8 @@ await esbuild.build({
   external: [
     '@stylistic/eslint-plugin-js',
     '@stylistic/eslint-plugin-ts',
-    '@typescript-eslint/parser'
+    '@typescript-eslint/parser',
+    '@typescript-eslint/eslint-plugin'
   ],
   platform: 'node',
   format: 'esm'

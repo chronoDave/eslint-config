@@ -1,4 +1,10 @@
+import typescriptEslint from '@typescript-eslint/eslint-plugin';
+
 const key = '@typescript-eslint';
+
+export const plugins = {
+  [key]: typescriptEslint
+};
 
 export const rules = Object.fromEntries(Object.entries({
   // Recommended
@@ -68,7 +74,7 @@ export const rules = Object.fromEntries(Object.entries({
   'unbound-method': 'error',
   // Stylistic
   'adjacent-overload-signatures': 'error',
-  'array-type': ['error', 'array-simple'],
+  'array-type': ['error', { default: 'array-simple' }],
   'ban-tslint-comment': 'error',
   'class-literal-property-style': 'off',
   'class-methods-use-this': 'error',
@@ -89,9 +95,9 @@ export const rules = Object.fromEntries(Object.entries({
   'default-param-last': 'error',
   'dot-notation': 'error',
   'explicit-function-return-type': 'off',
-  'explicit-member-accessibility': ['error', [{
+  'explicit-member-accessibility': ['error', {
     accessibility: 'no-public'
-  }]],
+  }],
   'explicit-module-boundary-types': 'error',
   'init-declarations': 'off',
   'max-params': ['warn', { max: 3 }],
@@ -177,11 +183,11 @@ export const rules = Object.fromEntries(Object.entries({
   }],
   'prefer-optional-chain': 'error',
   'prefer-readonly': 'error',
-  'prefer-readonly-parameter-types': ['error', [{
+  'prefer-readonly-parameter-types': ['error', {
     allow: [{
       from: 'package', name: 'WritableDraft', package: 'immer'
     }]
-  }]],
+  }],
   'prefer-reduce-type-parameter': 'error',
   'prefer-regexp-exec': 'error',
   'prefer-return-this-type': 'error',
