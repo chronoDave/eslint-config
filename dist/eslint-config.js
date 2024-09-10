@@ -377,6 +377,207 @@ var rules2 = Object.fromEntries(Object.entries({
   "type-annotation-spacing": "error"
 }).map(([k, v]) => [`${key2}/${k}`, v]));
 
+// src/config/plugins/typescript-eslint.js
+var key3 = "@typescript-eslint";
+var rules3 = Object.fromEntries(Object.entries({
+  // Recommended
+  "await-thenable": "error",
+  "ban-ts-comment": ["error", {
+    "ts-ignore": true,
+    "ts-nocheck": true,
+    "ts-check": false,
+    "ts-expect-error": {
+      descriptionFormat: "^: TS\\d+,.+"
+    }
+  }],
+  "no-array-constructor": "error",
+  "no-array-delete": "error",
+  "no-base-to-string": "error",
+  "no-duplicate-enum-values": "error",
+  "no-duplicate-type-constituents": "error",
+  "no-empty-object-type": "error",
+  "no-explicit-any": ["error", {
+    fixToUnknown: true
+  }],
+  "no-extra-non-null-assertion": "error",
+  "no-floating-promises": "error",
+  "no-for-in-array": "error",
+  "no-implied-eval": "error",
+  "no-misused-new": "error",
+  "no-misused-promises": ["error", {
+    checksConditionals: true,
+    checksSpreads: true
+  }],
+  "no-namespace": "error",
+  "no-non-null-asserted-optional-chain": "error",
+  "no-redundant-type-constituents": "error",
+  "no-require-imports": "error",
+  "no-this-alias": "error",
+  "no-unnecessary-type-assertion": "error",
+  "no-unnecessary-type-constraint": "error",
+  "no-unsafe-argument": "error",
+  "no-unsafe-assignment": "error",
+  "no-unsafe-call": "error",
+  "no-unsafe-declaration-merging": "error",
+  "no-unsafe-enum-comparison": "error",
+  "no-unsafe-function-type": "error",
+  "no-unsafe-member-access": "error",
+  "no-unsafe-return": "error",
+  "no-unsafe-unary-minus": "error",
+  "no-unused-expressions": "error",
+  "no-unused-vars": ["warn", {
+    args: "all",
+    argsIgnorePattern: "^_",
+    caughtErrors: "all",
+    caughtErrorsIgnorePattern: "^_",
+    destructuredArrayIgnorePattern: "^_",
+    varsIgnorePattern: "^_",
+    ignoreRestSiblings: true
+  }],
+  "no-wrapper-object-types": "error",
+  "only-throw-error": "error",
+  "prefer-as-const": "error",
+  "prefer-namespace-keyword": "error",
+  "prefer-promise-reject-errors": "error",
+  "require-await": "error",
+  "restrict-plus-operands": "error",
+  "restrict-template-expressions": "error",
+  "return-await": ["error", "in-try-catch"],
+  "triple-slash-reference": "error",
+  "unbound-method": "error",
+  // Stylistic
+  "adjacent-overload-signatures": "error",
+  "array-type": ["error", "array-simple"],
+  "ban-tslint-comment": "error",
+  "class-literal-property-style": "off",
+  "class-methods-use-this": "error",
+  "consistent-generic-constructors": ["error", "type-annotation"],
+  "consistent-indexed-object-style": ["error", "index-signature"],
+  "consistent-return": "error",
+  "consistent-type-assertions": ["error", {
+    assertionStyle: "as",
+    objectLiteralTypeAssertions: "allow-as-parameter"
+  }],
+  "consistent-type-definitions": ["error", "type"],
+  "consistent-type-exports": "error",
+  "consistent-type-imports": ["error", {
+    prefer: "type-imports",
+    fixStyle: "separate-type-imports",
+    disallowTypeAnnotations: true
+  }],
+  "default-param-last": "error",
+  "dot-notation": "error",
+  "explicit-function-return-type": "off",
+  "explicit-member-accessibility": ["error", [{
+    accessibility: "no-public"
+  }]],
+  "explicit-module-boundary-types": "error",
+  "init-declarations": "off",
+  "max-params": ["warn", { max: 3 }],
+  "member-ordering": "off",
+  "method-signature-style": ["error", "property"],
+  "naming-convention": ["error", {
+    // Enforce camelCase
+    selector: "variableLike",
+    format: ["camelCase", "UPPER_CASE"],
+    leadingUnderscore: "allow"
+  }, {
+    // Ignore imports
+    selector: "variable",
+    format: ["PascalCase", "camelCase", "UPPER_CASE"],
+    modifiers: ["global"]
+  }, {
+    // Disable underscore on public members
+    selector: [
+      "classProperty",
+      "classMethod"
+    ],
+    modifiers: ["public"],
+    format: ["camelCase"],
+    leadingUnderscore: "forbid"
+  }, {
+    // Enforce underscore on private members
+    selector: "memberLike",
+    modifiers: ["private"],
+    format: ["camelCase"],
+    leadingUnderscore: "require"
+  }, {
+    // Enforce underscore on protected members
+    selector: "memberLike",
+    modifiers: ["protected"],
+    format: ["camelCase"],
+    leadingUnderscore: "require"
+  }, {
+    // Enforce PascalCase on types / interfaces
+    selector: "typeLike",
+    format: ["PascalCase"]
+  }],
+  "no-confusing-non-null-assertion": "error",
+  "no-confusing-void-expression": "error",
+  "no-deprecated": "warn",
+  "no-dupe-class-members": "off",
+  "no-dynamic-delete": "warn",
+  "no-empty-function": "error",
+  "no-extraneous-class": "error",
+  "no-import-type-side-effects": "error",
+  "no-inferrable-types": "error",
+  "no-invalid-this": "off",
+  "no-invalid-void-type": "error",
+  "no-loop-func": "error",
+  "no-magic-numbers": "off",
+  "no-meaningless-void-operator": "error",
+  "no-mixed-enums": "error",
+  "no-non-null-asserted-nullish-coalescing": "error",
+  "no-non-null-assertion": "error",
+  "no-redeclare": "off",
+  "no-restricted-imports": "off",
+  "no-restricted-types": "off",
+  "no-shadow": "off",
+  "no-unnecessary-boolean-literal-compare": "error",
+  "no-unnecessary-condition": "error",
+  "no-unnecessary-parameter-property-assignment": "off",
+  "no-unnecessary-qualifier": "error",
+  "no-unnecessary-template-expression": "error",
+  "no-unnecessary-type-arguments": "error",
+  "no-use-before-define": "error",
+  "no-useless-constructor": "error",
+  "no-useless-empty-export": "error",
+  "non-nullable-type-assertion-style": "error",
+  "parameter-properties": "error",
+  "prefer-destructuring": "error",
+  "prefer-enum-initializers": "error",
+  "prefer-find": "error",
+  "prefer-for-of": "error",
+  "prefer-function-type": "error",
+  "prefer-includes": "error",
+  "prefer-literal-enum-member": "error",
+  "prefer-nullish-coalescing": ["error", {
+    ignoreConditionalTests: true
+  }],
+  "prefer-optional-chain": "error",
+  "prefer-readonly": "error",
+  "prefer-readonly-parameter-types": ["error", [{
+    allow: [{
+      from: "package",
+      name: "WritableDraft",
+      package: "immer"
+    }]
+  }]],
+  "prefer-reduce-type-parameter": "error",
+  "prefer-regexp-exec": "error",
+  "prefer-return-this-type": "error",
+  "prefer-string-starts-ends-with": "error",
+  "promise-function-async": "error",
+  "require-array-sort-compare": "error",
+  "strict-boolean-expressions": "error",
+  "switch-exhaustiveness-check": ["error", {
+    allowDefaultCaseForExhaustiveSwitch: true
+  }],
+  "typedef": "off",
+  "unified-signatures": "error",
+  "use-unknown-in-catch-callback-variable": "error"
+}).map(([k, v]) => [`${key3}/${k}`, v]));
+
 // src/config/typescript.js
 var typescript_default = {
   name: "@chronocide/typescript",
@@ -388,8 +589,88 @@ var typescript_default = {
     ...plugins2
   },
   rules: {
+    ...rules3,
     ...rules2,
-    "no-console": "error"
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/no-array-constructor/
+     */
+    "no-array-constructor": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/no-implied-eval/
+     */
+    "no-implied-eval": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/no-unused-expressions/
+     */
+    "no-unused-expressions": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/only-throw-error/
+     */
+    "no-throw-literal": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/prefer-promise-reject-errors/
+     */
+    "prefer-promise-reject-errors": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/require-await/
+     */
+    "require-await": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/return-await/
+     */
+    "return-await": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/consistent-return/
+     */
+    "consistent-return": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/default-param-last/
+     */
+    "default-param-last": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/dot-notation/
+     */
+    "dot-notation": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/max-params/
+     */
+    "max-params": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/no-empty-function/
+     */
+    "no-empty-function": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/no-loop-func/
+     */
+    "no-loop-func": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/no-use-before-define/
+     */
+    "no-use-before-define": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/no-useless-constructor/
+     */
+    "no-useless-constructor": "off",
+    /**
+     * Disabled to prevent false-positives
+     * @see https://typescript-eslint.io/rules/prefer-destructuring/
+     */
+    "prefer-destructuring": "off"
   }
 };
 
