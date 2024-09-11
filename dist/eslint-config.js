@@ -686,6 +686,11 @@ var typescript_default = {
   }
 };
 
+// src/config/ignore.js
+var ignore_default = {
+  ignores: ["build/**", "dist/**"]
+};
+
 // src/config/env/browser.js
 var browser_default = {
   AbortController: "readonly",
@@ -1879,8 +1884,17 @@ var node_default = {
 
 // src/index.js
 var env = { browser: browser_default, node: node_default };
-var configs = { base: base_default, typescript: typescript_default };
+var config = { base: base_default, typescript: typescript_default, ignore: ignore_default };
+var src_default = (options) => {
+  const cfg = [ignore_default, base_default];
+  const globals = (x) => ({ languageOptions: { globals: x } });
+  if (options?.ts) config.push(typescript_default);
+  if (options?.node) config.push(globals(env.node));
+  if (options?.browser) config.push(globals(env.browser));
+  return cfg;
+};
 export {
-  configs,
+  config,
+  src_default as default,
   env
 };
