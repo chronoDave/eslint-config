@@ -193,6 +193,7 @@ export const rules = Object.fromEntries(Object.entries({
   'promise-function-async': 'error',
   'require-array-sort-compare': 'error',
   'strict-boolean-expressions': ['error', {
+    allowAny: true,
     allowNullableObject: true,
     allowNullableBoolean: true
   }],
