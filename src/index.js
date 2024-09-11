@@ -7,6 +7,12 @@ import node from './config/env/node';
 export const env = { browser, node };
 export const config = { base, typescript, ignore };
 
+/**
+ * @param {object} options
+ * @param {boolean} options.ts Enable TypeScript rules
+ * @param {boolean} options.node Add Node globals
+ * @param {boolean} options.browser Add Browser globals
+ */
 export default options => {
   const cfg = [ignore, base];
   const globals = x => ({ languageOptions: { globals: x } });
