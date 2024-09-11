@@ -22,7 +22,7 @@ export const rules = Object.fromEntries(Object.entries({
   'no-base-to-string': 'error',
   'no-duplicate-enum-values': 'error',
   'no-duplicate-type-constituents': 'error',
-  'no-empty-object-type': 'error',
+  'no-empty-object-type': 'off',
   'no-explicit-any': ['error', {
     fixToUnknown: true
   }],
@@ -140,7 +140,9 @@ export const rules = Object.fromEntries(Object.entries({
     format: ['PascalCase']
   }],
   'no-confusing-non-null-assertion': 'error',
-  'no-confusing-void-expression': 'error',
+  'no-confusing-void-expression': ['error', {
+    ignoreArrowShorthand: true
+  }],
   'no-deprecated': 'warn',
   'no-dupe-class-members': 'off',
   'no-dynamic-delete': 'warn',
