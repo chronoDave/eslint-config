@@ -17,9 +17,9 @@ export default options => {
   const cfg = [ignore, base];
   const globals = x => ({ languageOptions: { globals: x } });
 
-  if (options?.ts) config.push(typescript);
-  if (options?.node) config.push(globals(env.node));
-  if (options?.browser) config.push(globals(env.browser));
+  if (options?.ts) cfg.push(typescript);
+  if (options?.node) cfg.push(globals(env.node));
+  if (options?.browser) cfg.push(globals(env.browser));
 
   return cfg;
 };
