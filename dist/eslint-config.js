@@ -420,13 +420,17 @@ var rules3 = Object.fromEntries(Object.entries({
   "no-unnecessary-type-assertion": "error",
   "no-unnecessary-type-constraint": "error",
   "no-unsafe-argument": "error",
-  "no-unsafe-assignment": "error",
-  "no-unsafe-call": "error",
+  "no-unsafe-assignment": "off",
+  // Generates false positives
+  "no-unsafe-call": "off",
+  // Generates false positives
   "no-unsafe-declaration-merging": "error",
   "no-unsafe-enum-comparison": "error",
   "no-unsafe-function-type": "error",
-  "no-unsafe-member-access": "error",
-  "no-unsafe-return": "error",
+  "no-unsafe-member-access": "off",
+  // Generates false positives
+  "no-unsafe-return": "off",
+  // Generates false positives
   "no-unsafe-unary-minus": "error",
   "no-unused-expressions": "error",
   "no-unused-vars": ["warn", {
@@ -455,9 +459,9 @@ var rules3 = Object.fromEntries(Object.entries({
   "ban-tslint-comment": "error",
   "class-literal-property-style": "off",
   "class-methods-use-this": "error",
-  "consistent-generic-constructors": ["error", "type-annotation"],
-  "consistent-indexed-object-style": ["error", "index-signature"],
-  "consistent-return": "error",
+  "consistent-generic-constructors": ["error", "constructor"],
+  "consistent-indexed-object-style": ["error", "record"],
+  "consistent-return": "off",
   "consistent-type-assertions": ["error", {
     assertionStyle: "as",
     objectLiteralTypeAssertions: "allow-as-parameter"
@@ -560,20 +564,17 @@ var rules3 = Object.fromEntries(Object.entries({
   }],
   "prefer-optional-chain": "error",
   "prefer-readonly": "error",
-  "prefer-readonly-parameter-types": ["error", {
-    allow: [{
-      from: "package",
-      name: "WritableDraft",
-      package: "immer"
-    }]
-  }],
+  "prefer-readonly-parameter-types": "off",
   "prefer-reduce-type-parameter": "error",
   "prefer-regexp-exec": "error",
   "prefer-return-this-type": "error",
   "prefer-string-starts-ends-with": "error",
   "promise-function-async": "error",
   "require-array-sort-compare": "error",
-  "strict-boolean-expressions": "error",
+  "strict-boolean-expressions": ["error", {
+    allowNullableObject: true,
+    allowNullableBoolean: true
+  }],
   "switch-exhaustiveness-check": ["error", {
     allowDefaultCaseForExhaustiveSwitch: true
   }],
