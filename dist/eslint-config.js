@@ -417,7 +417,7 @@ const rules = Object.fromEntries(Object.entries({
   'no-this-alias': 'error',
   'no-unnecessary-type-assertion': 'error',
   'no-unnecessary-type-constraint': 'error',
-  'no-unsafe-argument': 'error',
+  'no-unsafe-argument': 'off', // Generates false positives
   'no-unsafe-assignment': 'off', // Generates false positives
   'no-unsafe-call': 'off', // Generates false positives
   'no-unsafe-declaration-merging': 'error',
