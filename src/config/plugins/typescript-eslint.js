@@ -35,7 +35,7 @@ export const rules = Object.fromEntries(Object.entries({
     checksConditionals: true,
     checksSpreads: true
   }],
-  'no-namespace': 'error',
+  'no-namespace': 'warn',
   'no-non-null-asserted-optional-chain': 'error',
   'no-redundant-type-constituents': 'warn',
   'no-require-imports': 'error',
