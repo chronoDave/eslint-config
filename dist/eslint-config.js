@@ -193,7 +193,16 @@ var suggestions = {
   'operator-assignment': ['error', 'always'],
   'prefer-arrow-callback': 'error',
   'prefer-const': 'error',
-  'prefer-destructuring': 'error',
+  'prefer-destructuring': ['error', {
+    "VariableDeclarator": {
+      array: false,
+      object: true
+    },
+    "AssignmentExpression": {
+      array: false,
+      object: true
+    }
+  }],
   'prefer-exponentiation-operator': 'error',
   'prefer-named-capture-group': 'off',
   'prefer-numeric-literals': 'error',
@@ -412,7 +421,7 @@ const rules = Object.fromEntries(Object.entries({
   }],
   'no-namespace': 'error',
   'no-non-null-asserted-optional-chain': 'error',
-  'no-redundant-type-constituents': 'error',
+  'no-redundant-type-constituents': 'warn',
   'no-require-imports': 'error',
   'no-this-alias': 'error',
   'no-unnecessary-type-assertion': 'error',
@@ -454,13 +463,13 @@ const rules = Object.fromEntries(Object.entries({
   'class-literal-property-style': 'off',
   'class-methods-use-this': 'error',
   'consistent-generic-constructors': ['error', 'constructor'],
-  'consistent-indexed-object-style': ['error', 'record'],
+  'consistent-indexed-object-style': ['warn', 'record'],
   'consistent-return': 'off',
   'consistent-type-assertions': ['error', {
     assertionStyle: 'as',
     objectLiteralTypeAssertions: 'allow-as-parameter'
   }],
-  'consistent-type-definitions': ['error', 'type'],
+  'consistent-type-definitions': ['warn', 'type'],
   'consistent-type-exports': 'error',
   'consistent-type-imports': ['error', {
     prefer: 'type-imports',
@@ -478,7 +487,7 @@ const rules = Object.fromEntries(Object.entries({
   'max-params': ['warn', { max: 3 }],
   'member-ordering': 'off',
   'method-signature-style': ['error', 'property'],
-  'naming-convention': ['error', {
+  'naming-convention': ['warn', {
     // Enforce camelCase
     selector: 'variableLike',
     format: ['camelCase', 'UPPER_CASE'],
