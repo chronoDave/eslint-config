@@ -125,7 +125,16 @@ export default {
   'operator-assignment': ['error', 'always'],
   'prefer-arrow-callback': 'error',
   'prefer-const': 'error',
-  'prefer-destructuring': 'error',
+  'prefer-destructuring': ['error', {
+    "VariableDeclarator": {
+      array: false,
+      object: true
+    },
+    "AssignmentExpression": {
+      array: false,
+      object: true
+    }
+  }],
   'prefer-exponentiation-operator': 'error',
   'prefer-named-capture-group': 'off',
   'prefer-numeric-literals': 'error',
