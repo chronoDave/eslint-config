@@ -194,11 +194,11 @@ var suggestions = {
   'prefer-arrow-callback': 'error',
   'prefer-const': 'error',
   'prefer-destructuring': ['error', {
-    "VariableDeclarator": {
+    VariableDeclarator: {
       array: false,
       object: true
     },
-    "AssignmentExpression": {
+    AssignmentExpression: {
       array: false,
       object: true
     }

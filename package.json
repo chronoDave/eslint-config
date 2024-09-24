@@ -11,6 +11,7 @@
     "dist/**/*"
   ],
   "scripts": {
+    "lint": "eslint src",
     "build": "rollup -c",
     "preversion": "npm run build"
   },

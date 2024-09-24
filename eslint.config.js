@@ -1,13 +1,3 @@
-import { configs, env } from './dist/eslint-config.js';
+import config from './dist/eslint-config.js';
 
-export default [
-  configs.base,
-  configs.typescript,
-  {
-    languageOptions: {
-      globals: {
-        ...env.node
-      }
-    }
-  }
-];
+export default config({ node: true });
