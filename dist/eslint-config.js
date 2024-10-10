@@ -482,7 +482,7 @@ const rules = Object.fromEntries(Object.entries({
   'explicit-member-accessibility': ['error', {
     accessibility: 'no-public'
   }],
-  'explicit-module-boundary-types': 'error',
+  'explicit-module-boundary-types': 'off',
   'init-declarations': 'off',
   'max-params': ['warn', { max: 3 }],
   'member-ordering': 'off',
