@@ -39,13 +39,13 @@ export const rules = Object.fromEntries(Object.entries({
   'linebreak-style': 'off',
   'lines-around-comment': 'off',
   'lines-between-class-members': 'error',
-  'max-len': 'error',
+  'max-len': 'off',
   'max-statements-per-line': 'error',
   'multiline-comment-style': 'error',
   'multiline-ternary': 'off',
   'new-parens': ['error', 'always'],
   'newline-per-chained-call': 'error',
-  'no-confusing-arrow': ['error', { allowParens: true }],
+  'no-confusing-arrow': 'off',
   'no-extra-parens': ['error', 'all', {
     ignoreJSX: 'multi-line',
     enforceForArrowConditionals: false
