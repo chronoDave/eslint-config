@@ -417,6 +417,7 @@ const rules = Object.fromEntries(Object.entries({
   'no-misused-new': 'error',
   'no-misused-promises': ['error', {
     checksConditionals: true,
+    checksVoidReturn: false,
     checksSpreads: true
   }],
   'no-namespace': 'warn',
