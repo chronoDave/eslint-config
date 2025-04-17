@@ -411,7 +411,7 @@ const rules = Object.fromEntries(Object.entries({
     fixToUnknown: true
   }],
   'no-extra-non-null-assertion': 'error',
-  'no-floating-promises': 'error',
+  'no-floating-promises': 'off',
   'no-for-in-array': 'error',
   'no-implied-eval': 'error',
   'no-misused-new': 'error',
