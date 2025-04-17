@@ -1,7 +1,9 @@
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import { createNodeResolver } from 'eslint-plugin-import-x';
 import parser from '@typescript-eslint/parser';
 
-import * as stylistic from './plugins/stylistic-ts';
-import * as typescriptEslint from './plugins/typescript-eslint';
+import * as stylistic from './plugins/stylistic-ts.js';
+import * as typescriptEslint from './plugins/typescript-eslint.js';
 
 export default {
   name: '@chronocide/typescript',
@@ -15,6 +17,20 @@ export default {
   plugins: {
     ...typescriptEslint.plugins,
     ...stylistic.plugins
+  },
+  settings: {
+    'import-x/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
+    'import-x/resolver-next': [
+      createNodeResolver(),
+      createTypeScriptImportResolver({
+        alwaysTryTypes: true,
+        bun: false
+      })
+    ],
+    'import-x/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
+    }
   },
   rules: {
     ...typescriptEslint.rules,

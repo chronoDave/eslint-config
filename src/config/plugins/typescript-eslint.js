@@ -1,12 +1,14 @@
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 
+import format from '../lib/rule.js';
+
 const key = '@typescript-eslint';
 
 export const plugins = {
   [key]: typescriptEslint
 };
 
-export const rules = Object.fromEntries(Object.entries({
+export const rules = format(key)({
   // Recommended
   'await-thenable': 'error',
   'ban-ts-comment': ['error', {
@@ -204,4 +206,4 @@ export const rules = Object.fromEntries(Object.entries({
   'typedef': 'off',
   'unified-signatures': 'error',
   'use-unknown-in-catch-callback-variable': 'error'
-}).map(([k, v]) => [`${key}/${k}`, v]));
+});

@@ -1,12 +1,14 @@
 import stylistic from '@stylistic/eslint-plugin-ts';
 
+import format from '../lib/rule.js';
+
 const key = '@stylistic/ts';
 
 export const plugins = {
   [key]: stylistic
 };
 
-export const rules = Object.fromEntries(Object.entries({
+export const rules = format(key)({
   'block-spacing': ['error', 'always'],
   'brace-style': ['error', '1tbs'],
   'comma-dangle': ['error', 'never'],
@@ -37,4 +39,4 @@ export const rules = Object.fromEntries(Object.entries({
   }],
   'space-infix-ops': 'error',
   'type-annotation-spacing': 'error'
-}).map(([k, v]) => [`${key}/${k}`, v]));
+});

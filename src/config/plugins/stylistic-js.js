@@ -1,12 +1,14 @@
 import stylistic from '@stylistic/eslint-plugin-js';
 
+import format from '../lib/rule.js';
+
 const key = '@stylistic/js';
 
 export const plugins = {
   [key]: stylistic
 };
 
-export const rules = Object.fromEntries(Object.entries({
+export const rules = format(key)({
   'array-bracket-newline': ['error', 'consistent'],
   'array-bracket-spacing': ['error', 'never'],
   'array-element-newline': ['error', 'consistent'],
@@ -30,7 +32,7 @@ export const rules = Object.fromEntries(Object.entries({
     before: true,
     after: false
   }],
-  'implicit-arrow-linebreak': 'error',
+  'implicit-arrow-linebreak': 'off',
   'indent': ['error', 2],
   'jsx-quotes': ['error', 'prefer-single'],
   'key-spacing': 'error',
@@ -99,4 +101,4 @@ export const rules = Object.fromEntries(Object.entries({
     before: false,
     after: true
   }]
-}).map(([k, v]) => [`${key}/${k}`, v]));
+});
