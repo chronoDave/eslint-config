@@ -154,7 +154,9 @@ export const rules = format(key)({
   'no-import-type-side-effects': 'error',
   'no-inferrable-types': 'error',
   'no-invalid-this': 'off',
-  'no-invalid-void-type': 'error',
+  'no-invalid-void-type': ['error', {
+    allowInGenericTypeArguments: true
+  }],
   'no-loop-func': 'error',
   'no-magic-numbers': 'off',
   'no-meaningless-void-operator': 'error',
