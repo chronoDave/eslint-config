@@ -382,16 +382,7 @@ var suggestions_default = {
   "operator-assignment": ["error", "always"],
   "prefer-arrow-callback": "error",
   "prefer-const": "error",
-  "prefer-destructuring": ["error", {
-    VariableDeclarator: {
-      array: false,
-      object: true
-    },
-    AssignmentExpression: {
-      array: false,
-      object: true
-    }
-  }],
+  "prefer-destructuring": "off",
   "prefer-exponentiation-operator": "error",
   "prefer-named-capture-group": "off",
   "prefer-numeric-literals": "error",
@@ -665,7 +656,7 @@ var rules5 = rule_default(key4)({
   "no-useless-empty-export": "error",
   "non-nullable-type-assertion-style": "error",
   "parameter-properties": "error",
-  "prefer-destructuring": "error",
+  "prefer-destructuring": "off",
   "prefer-enum-initializers": "error",
   "prefer-find": "error",
   "prefer-for-of": "error",

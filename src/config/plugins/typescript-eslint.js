@@ -178,7 +178,7 @@ export const rules = format(key)({
   'no-useless-empty-export': 'error',
   'non-nullable-type-assertion-style': 'error',
   'parameter-properties': 'error',
-  'prefer-destructuring': 'error',
+  'prefer-destructuring': 'off',
   'prefer-enum-initializers': 'error',
   'prefer-find': 'error',
   'prefer-for-of': 'error',

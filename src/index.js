@@ -1,8 +1,8 @@
-import base from './config/base';
-import typescript from './config/typescript';
-import ignore from './config/ignore';
-import browser from './config/env/browser';
-import node from './config/env/node';
+import base from './config/base.js';
+import typescript from './config/typescript.js';
+import ignore from './config/ignore.js';
+import browser from './config/env/browser.js';
+import node from './config/env/node.js';
 
 export const env = { browser, node };
 export const config = { base, typescript, ignore };
