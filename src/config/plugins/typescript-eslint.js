@@ -29,7 +29,7 @@ export const rules = format(key)({
     fixToUnknown: true
   }],
   'no-extra-non-null-assertion': 'error',
-  'no-floating-promises': 'off',
+  'no-floating-promises': 'error',
   'no-for-in-array': 'error',
   'no-implied-eval': 'error',
   'no-misused-new': 'error',
