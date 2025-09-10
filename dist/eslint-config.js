@@ -502,13 +502,13 @@ var rules5 = rule_default(key4)({
     fixToUnknown: true
   }],
   "no-extra-non-null-assertion": "error",
-  "no-floating-promises": "error",
+  "no-floating-promises": "off",
   "no-for-in-array": "error",
   "no-implied-eval": "error",
   "no-misused-new": "error",
   "no-misused-promises": ["error", {
     checksConditionals: true,
-    checksVoidReturn: false,
+    checksVoidReturn: true,
     checksSpreads: true
   }],
   "no-namespace": "warn",
