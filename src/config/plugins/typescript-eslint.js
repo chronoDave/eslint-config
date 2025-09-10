@@ -29,13 +29,13 @@ export const rules = format(key)({
     fixToUnknown: true
   }],
   'no-extra-non-null-assertion': 'error',
-  'no-floating-promises': 'error',
+  'no-floating-promises': 'off',
   'no-for-in-array': 'error',
   'no-implied-eval': 'error',
   'no-misused-new': 'error',
   'no-misused-promises': ['error', {
     checksConditionals: true,
-    checksVoidReturn: false,
+    checksVoidReturn: true,
     checksSpreads: true
   }],
   'no-namespace': 'warn',
