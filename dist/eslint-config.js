@@ -502,7 +502,7 @@ var rules5 = rule_default(key4)({
     fixToUnknown: true
   }],
   "no-extra-non-null-assertion": "error",
-  "no-floating-promises": "off",
+  "no-floating-promises": "error",
   "no-for-in-array": "error",
   "no-implied-eval": "error",
   "no-misused-new": "error",
