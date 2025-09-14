@@ -17,7 +17,8 @@ export const rules = format('import-x')({
   'no-deprecated': 'warn',
   'no-empty-named-blocks': 'error',
   'no-extraneous-dependencies': ['error', {
-    devDependencies: ['**/*.spec.*', '**/*.fixture.*']
+    optionalDependencies: ['**/*.spec.*', '**/*.fixture.*', '**/*.config.*'],
+    devDependencies: ['**/*.spec.*', '**/*.fixture.*', '**/*.config.*']
   }],
   'no-mutable-exports': 'error',
   'no-named-as-default': 'off',
