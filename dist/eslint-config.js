@@ -623,7 +623,8 @@ var rules5 = rule_default(key4)({
   }],
   "no-confusing-non-null-assertion": "error",
   "no-confusing-void-expression": ["error", {
-    ignoreArrowShorthand: true
+    ignoreArrowShorthand: true,
+    ignoreVoidReturningFunctions: true
   }],
   "no-deprecated": "warn",
   "no-dupe-class-members": "off",
