@@ -702,7 +702,8 @@ var typescript_default = {
   },
   plugins: {
     ...plugins4,
-    ...plugins3
+    ...plugins3,
+    ...plugins
   },
   settings: {
     "import-x/extensions": [".js", ".jsx", ".ts", ".tsx"],
@@ -721,6 +722,7 @@ var typescript_default = {
   rules: {
     ...rules5,
     ...rules4,
+    ...rules2,
     /**
      * Disabled to prevent false-positives
      * @see https://typescript-eslint.io/rules/no-array-constructor/
