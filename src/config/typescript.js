@@ -4,6 +4,7 @@ import parser from '@typescript-eslint/parser';
 
 import * as stylistic from './plugins/stylistic-ts.js';
 import * as typescriptEslint from './plugins/typescript-eslint.js';
+import * as importx from './plugins/import-x.js';
 
 export default {
   name: '@chronocide/typescript',
@@ -16,7 +17,8 @@ export default {
   },
   plugins: {
     ...typescriptEslint.plugins,
-    ...stylistic.plugins
+    ...stylistic.plugins,
+    ...importx.plugins
   },
   settings: {
     'import-x/extensions': ['.js', '.jsx', '.ts', '.tsx'],
@@ -35,6 +37,7 @@ export default {
   rules: {
     ...typescriptEslint.rules,
     ...stylistic.rules,
+    ...importx.rules,
     /**
      * Disabled to prevent false-positives
      * @see https://typescript-eslint.io/rules/no-array-constructor/
