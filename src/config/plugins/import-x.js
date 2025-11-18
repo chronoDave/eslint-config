@@ -18,7 +18,8 @@ export const rules = format('import-x')({
   'no-empty-named-blocks': 'error',
   'no-extraneous-dependencies': ['error', {
     optionalDependencies: ['**/*.spec.*', '**/*.fixture.*', '**/*.config.*'],
-    devDependencies: ['**/*.spec.*', '**/*.fixture.*', '**/*.config.*']
+    devDependencies: ['**/*.spec.*', '**/*.fixture.*', '**/*.config.*'],
+    whitelist: ['esbuild', 'electron']
   }],
   'no-mutable-exports': 'error',
   'no-named-as-default': 'off',
