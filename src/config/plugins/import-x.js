@@ -48,7 +48,7 @@ export const rules = format('import-x')({
   // Style guide
   'consistent-type-specifier-style': ['error', 'prefer-top-level'],
   'dynamic-import-chunkname': 'off',
-  'exports-last': 'error',
+  'exports-last': 'off',
   'extensions': ['error', 'always'],
   'first': 'error',
   'group-exports': 'off',
