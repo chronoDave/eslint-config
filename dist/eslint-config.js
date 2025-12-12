@@ -21,9 +21,20 @@ var rules2 = rule_default("import-x")({
   "no-deprecated": "warn",
   "no-empty-named-blocks": "error",
   "no-extraneous-dependencies": ["error", {
-    optionalDependencies: ["**/*.spec.*", "**/*.fixture.*", "**/*.config.*"],
-    devDependencies: ["**/*.spec.*", "**/*.fixture.*", "**/*.config.*"],
-    whitelist: ["esbuild", "electron"]
+    optionalDependencies: [
+      "**/*.spec.*",
+      "**/*.fixture.*",
+      "**/*.config.*",
+      "test/**/*",
+      "scripts/**/*"
+    ],
+    devDependencies: [
+      "**/*.spec.*",
+      "**/*.fixture.*",
+      "**/*.config.*",
+      "test/**/*",
+      "scripts/**/*"
+    ]
   }],
   "no-mutable-exports": "error",
   "no-named-as-default": "off",
