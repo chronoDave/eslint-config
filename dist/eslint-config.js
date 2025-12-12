@@ -24,6 +24,7 @@ var rules2 = rule_default("import-x")({
     optionalDependencies: [
       "**/*.spec.*",
       "**/*.fixture.*",
+      "**/*.struct.*",
       "**/*.config.*",
       "test/**/*",
       "scripts/**/*"
@@ -31,6 +32,7 @@ var rules2 = rule_default("import-x")({
     devDependencies: [
       "**/*.spec.*",
       "**/*.fixture.*",
+      "**/*.struct.*",
       "**/*.config.*",
       "test/**/*",
       "scripts/**/*"
