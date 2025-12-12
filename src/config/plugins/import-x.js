@@ -20,6 +20,7 @@ export const rules = format('import-x')({
     optionalDependencies: [
       '**/*.spec.*',
       '**/*.fixture.*',
+      '**/*.struct.*',
       '**/*.config.*',
       'test/**/*',
       'scripts/**/*'
@@ -27,6 +28,7 @@ export const rules = format('import-x')({
     devDependencies: [
       '**/*.spec.*',
       '**/*.fixture.*',
+      '**/*.struct.*',
       '**/*.config.*',
       'test/**/*',
       'scripts/**/*'
