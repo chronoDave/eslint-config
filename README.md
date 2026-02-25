@@ -2,16 +2,8 @@
 
 ## Install
 
-**`package.json`**
-
-```JSON
-{
-  ...
-  "script": {
-    "@chronocide/eslint-config": "git+https://github.com/chronoDave/eslint-config.git"
-  }
-  ...
-}
+```sh
+npm i @chronocide/eslint-config
 ```
 
 ## Usage
