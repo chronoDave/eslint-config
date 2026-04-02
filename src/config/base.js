@@ -1,7 +1,7 @@
 import { createNodeResolver } from 'eslint-plugin-import-x';
 
 import * as importx from './plugins/import-x.js';
-import * as stylistic from './plugins/stylistic-js.js';
+import * as stylistic from './plugins/stylistic.js';
 import layout from './rules/layout.js';
 import problems from './rules/problems.js';
 import suggestions from './rules/suggestions.js';

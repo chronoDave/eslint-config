@@ -2,7 +2,7 @@ import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescrip
 import { createNodeResolver } from 'eslint-plugin-import-x';
 import parser from '@typescript-eslint/parser';
 
-import * as stylistic from './plugins/stylistic-ts.js';
+import * as stylistic from './plugins/stylistic.js';
 import * as typescriptEslint from './plugins/typescript-eslint.js';
 import * as importx from './plugins/import-x.js';
 

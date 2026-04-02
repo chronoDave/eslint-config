@@ -1,16 +1,13 @@
 import esbuild from 'esbuild';
+import fsp from 'fs/promises';
+
+const raw = await fsp.readFile('package.json', 'utf-8');
+const pkg = JSON.parse(raw);
 
 esbuild.build({
   entryPoints: ['src/index.js'],
   outfile: 'dist/eslint-config.js',
-  external: [
-    '@stylistic/eslint-plugin-js',
-    '@stylistic/eslint-plugin-ts',
-    '@typescript-eslint/eslint-plugin',
-    '@typescript-eslint/parser',
-    'eslint-import-resolver-typescript',
-    'eslint-plugin-import-x'
-  ],
+  external: Object.keys(pkg.peerDependencies),
   bundle: true,
   format: 'esm',
   platform: 'node'

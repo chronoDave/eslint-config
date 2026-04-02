@@ -12,8 +12,8 @@
   "scripts": {
     "lint": "eslint src",
     "build": "node scripts/build.js",
-    "preversion": "npm run lint",
-    "version": "npm run build && git add -A dist",
+    "preversion": "npm run build && npm run lint",
+    "version": "git add -A dist",
     "postversion": "git push && git push --tags"
   },
   "author": "Chronocide",
@@ -26,17 +26,13 @@
     "url": "git+https://github.com/chronoDave/eslint-config.git"
   },
   "devDependencies": {
-    "esbuild": "^0.25.2",
-    "eslint": "^9.31.0"
+    "esbuild": "^0.27.5"
   },
   "peerDependencies": {
-    "eslint": "^9.31.0"
-  },
-  "dependencies": {
-    "@stylistic/eslint-plugin-js": "^2.2.0",
-    "@stylistic/eslint-plugin-ts": "^2.2.0",
+    "@stylistic/eslint-plugin": "^5.10.0",
     "@typescript-eslint/eslint-plugin": "^8.5.0",
     "@typescript-eslint/parser": "^8.5.0",
+    "eslint": "^9.31.0",
     "eslint-import-resolver-typescript": "^4.3.2",
     "eslint-plugin-import-x": "^4.10.5"
   }

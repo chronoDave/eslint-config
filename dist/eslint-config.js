@@ -5,7 +5,7 @@ import { createNodeResolver } from "eslint-plugin-import-x";
 import * as importx from "eslint-plugin-import-x";
 
 // src/config/lib/rule.js
-var rule_default = (key5) => (rules6) => Object.fromEntries(Object.entries(rules6).map(([k, v]) => [`${key5}/${k}`, v]));
+var rule_default = (key4) => (rules5) => Object.fromEntries(Object.entries(rules5).map(([k, v]) => [`${key4}/${k}`, v]));
 
 // src/config/plugins/import-x.js
 var key = "import-x";
@@ -99,9 +99,9 @@ var rules2 = rule_default("import-x")({
   "prefer-default-export": "off"
 });
 
-// src/config/plugins/stylistic-js.js
-import stylistic from "@stylistic/eslint-plugin-js";
-var key2 = "@stylistic/js";
+// src/config/plugins/stylistic.js
+import stylistic from "@stylistic/eslint-plugin";
+var key2 = "@stylistic";
 var plugins2 = {
   [key2]: stylistic
 };
@@ -140,6 +140,7 @@ var rules3 = rule_default(key2)({
   "lines-between-class-members": "error",
   "max-len": "off",
   "max-statements-per-line": "error",
+  "member-delimiter-style": "error",
   "multiline-comment-style": "error",
   "multiline-ternary": "off",
   "new-parens": ["error", "always"],
@@ -147,7 +148,7 @@ var rules3 = rule_default(key2)({
   "no-confusing-arrow": "off",
   "no-extra-parens": ["error", "all", {
     ignoreJSX: "multi-line",
-    enforceForArrowConditionals: false
+    ignoredNodes: ["ArrowFunctionExpression[body.type=ConditionalExpression]"]
   }],
   "no-extra-semi": "error",
   "no-floating-decimal": "error",
@@ -192,6 +193,9 @@ var rules3 = rule_default(key2)({
   "switch-colon-spacing": "error",
   "template-curly-spacing": ["error", "never"],
   "template-tag-spacing": ["error", "always"],
+  "type-annotation-spacing": "error",
+  "type-generic-spacing": "error",
+  "type-named-tuple-spacing": "error",
   "wrap-iife": ["error", "outside"],
   "wrap-regex": "off",
   "yield-star-spacing": ["error", {
@@ -451,52 +455,13 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
 import { createNodeResolver as createNodeResolver2 } from "eslint-plugin-import-x";
 import parser from "@typescript-eslint/parser";
 
-// src/config/plugins/stylistic-ts.js
-import stylistic2 from "@stylistic/eslint-plugin-ts";
-var key3 = "@stylistic/ts";
-var plugins3 = {
-  [key3]: stylistic2
-};
-var rules4 = rule_default(key3)({
-  "block-spacing": ["error", "always"],
-  "brace-style": ["error", "1tbs"],
-  "comma-dangle": ["error", "never"],
-  "comma-spacing": "error",
-  "func-call-spacing": "error",
-  "function-call-spacing": "error",
-  "indent": ["error", 2],
-  "key-spacing": "error",
-  "keyword-spacing": "error",
-  "lines-around-comment": "off",
-  "lines-between-class-members": "off",
-  "member-delimiter-style": "error",
-  "no-extra-parens": ["error", "all", {
-    ignoreJSX: "multi-line",
-    enforceForArrowConditionals: false
-  }],
-  "no-extra-semi": "error",
-  "object-curly-spacing": "off",
-  "padding-line-between-statements": "off",
-  "quote-props": ["error", "consistent-as-needed"],
-  "quotes": ["error", "single"],
-  "semi": ["error", "always"],
-  "space-before-blocks": ["error", "always"],
-  "space-before-function-paren": ["error", {
-    anonymous: "never",
-    named: "never",
-    asyncArrow: "always"
-  }],
-  "space-infix-ops": "error",
-  "type-annotation-spacing": "error"
-});
-
 // src/config/plugins/typescript-eslint.js
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
-var key4 = "@typescript-eslint";
-var plugins4 = {
-  [key4]: typescriptEslint
+var key3 = "@typescript-eslint";
+var plugins3 = {
+  [key3]: typescriptEslint
 };
-var rules5 = rule_default(key4)({
+var rules4 = rule_default(key3)({
   // Recommended
   "await-thenable": "error",
   "ban-ts-comment": ["error", {
@@ -715,8 +680,8 @@ var typescript_default = {
     }
   },
   plugins: {
-    ...plugins4,
     ...plugins3,
+    ...plugins2,
     ...plugins
   },
   settings: {
@@ -734,8 +699,8 @@ var typescript_default = {
     }
   },
   rules: {
-    ...rules5,
     ...rules4,
+    ...rules3,
     ...rules2,
     /**
      * Disabled to prevent false-positives

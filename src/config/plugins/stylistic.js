@@ -1,8 +1,8 @@
-import stylistic from '@stylistic/eslint-plugin-js';
+import stylistic from '@stylistic/eslint-plugin';
 
 import format from '../lib/rule.js';
 
-const key = '@stylistic/js';
+const key = '@stylistic';
 
 export const plugins = {
   [key]: stylistic
@@ -43,6 +43,7 @@ export const rules = format(key)({
   'lines-between-class-members': 'error',
   'max-len': 'off',
   'max-statements-per-line': 'error',
+  'member-delimiter-style': 'error',
   'multiline-comment-style': 'error',
   'multiline-ternary': 'off',
   'new-parens': ['error', 'always'],
@@ -50,7 +51,7 @@ export const rules = format(key)({
   'no-confusing-arrow': 'off',
   'no-extra-parens': ['error', 'all', {
     ignoreJSX: 'multi-line',
-    enforceForArrowConditionals: false
+    ignoredNodes: ['ArrowFunctionExpression[body.type=ConditionalExpression]']
   }],
   'no-extra-semi': 'error',
   'no-floating-decimal': 'error',
@@ -95,6 +96,9 @@ export const rules = format(key)({
   'switch-colon-spacing': 'error',
   'template-curly-spacing': ['error', 'never'],
   'template-tag-spacing': ['error', 'always'],
+  'type-annotation-spacing': 'error',
+  'type-generic-spacing': 'error',
+  'type-named-tuple-spacing': 'error',
   'wrap-iife': ['error', 'outside'],
   'wrap-regex': 'off',
   'yield-star-spacing': ['error', {
