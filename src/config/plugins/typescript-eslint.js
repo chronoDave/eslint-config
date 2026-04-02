@@ -173,7 +173,7 @@ export const rules = format(key)({
   'no-unnecessary-parameter-property-assignment': 'off',
   'no-unnecessary-qualifier': 'error',
   'no-unnecessary-template-expression': 'error',
-  'no-unnecessary-type-arguments': 'error',
+  'no-unnecessary-type-arguments': 'off',
   'no-use-before-define': 'error',
   'no-useless-constructor': 'error',
   'no-useless-empty-export': 'error',
