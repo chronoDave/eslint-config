@@ -146,10 +146,7 @@ var rules3 = rule_default(key2)({
   "new-parens": ["error", "always"],
   "newline-per-chained-call": "error",
   "no-confusing-arrow": "off",
-  "no-extra-parens": ["error", "all", {
-    ignoreJSX: "multi-line",
-    ignoredNodes: ["ArrowFunctionExpression[body.type=ConditionalExpression]"]
-  }],
+  "no-extra-parens": "off",
   "no-extra-semi": "error",
   "no-floating-decimal": "error",
   "no-mixed-operators": "error",
