@@ -27,7 +27,7 @@ export const rules = format(key)({
   'eol-last': 'error',
   'function-call-argument-newline': ['error', 'consistent'],
   'function-call-spacing': 'error',
-  'function-paren-newline': ['error', 'multiline'],
+  'function-paren-newline': 'off',
   'generator-star-spacing': ['error', {
     before: true,
     after: false
