@@ -137,7 +137,7 @@ var rules3 = rule_default(key2)({
   "line-comment-position": "off",
   "linebreak-style": "off",
   "lines-around-comment": "off",
-  "lines-between-class-members": "error",
+  "lines-between-class-members": "off",
   "max-len": "off",
   "max-statements-per-line": "error",
   "member-delimiter-style": "error",
