@@ -28,7 +28,7 @@
     "url": "git+https://github.com/chronoDave/eslint-config.git"
   },
   "devDependencies": {
-    "esbuild": "^0.27.5"
+    "esbuild": "^0.28.1"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
