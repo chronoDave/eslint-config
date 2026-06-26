@@ -659,6 +659,7 @@ var rules4 = rule_default(key3)({
   "require-array-sort-compare": "error",
   "strict-boolean-expressions": ["error", {
     allowAny: true,
+    allowString: true,
     allowNullableObject: true,
     allowNullableBoolean: true
   }],
