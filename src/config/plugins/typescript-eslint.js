@@ -187,7 +187,10 @@ export const rules = format(key)({
   'prefer-includes': 'error',
   'prefer-literal-enum-member': 'error',
   'prefer-nullish-coalescing': ['error', {
-    ignoreConditionalTests: true
+    ignoreConditionalTests: true,
+    ignorePrimitives: {
+      string: true // Allow expressions such as `const a = "" || "b"`
+    }
   }],
   'prefer-optional-chain': 'error',
   'prefer-readonly': 'error',
