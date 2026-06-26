@@ -642,7 +642,11 @@ var rules4 = rule_default(key3)({
   "prefer-includes": "error",
   "prefer-literal-enum-member": "error",
   "prefer-nullish-coalescing": ["error", {
-    ignoreConditionalTests: true
+    ignoreConditionalTests: true,
+    ignorePrimitives: {
+      string: true
+      // Allow expressions such as `const a = "" || "b"`
+    }
   }],
   "prefer-optional-chain": "error",
   "prefer-readonly": "error",
