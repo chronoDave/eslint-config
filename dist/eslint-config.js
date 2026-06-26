@@ -659,7 +659,8 @@ var rules4 = rule_default(key3)({
   "require-array-sort-compare": "error",
   "strict-boolean-expressions": ["error", {
     allowAny: true,
-    allowString: true,
+    allowNullableString: true,
+    // Allow expressions such as `const a = "" || "b"`
     allowNullableObject: true,
     allowNullableBoolean: true
   }],
