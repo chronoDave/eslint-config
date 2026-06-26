@@ -203,6 +203,7 @@ export const rules = format(key)({
   'require-array-sort-compare': 'error',
   'strict-boolean-expressions': ['error', {
     allowAny: true,
+    allowString: true,
     allowNullableObject: true,
     allowNullableBoolean: true
   }],
