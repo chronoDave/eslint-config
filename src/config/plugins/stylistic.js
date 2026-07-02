@@ -47,7 +47,7 @@ export const rules = format(key)({
   'multiline-comment-style': 'error',
   'multiline-ternary': 'off',
   'new-parens': ['error', 'always'],
-  'newline-per-chained-call': 'error',
+  'newline-per-chained-call': 'off',
   'no-confusing-arrow': 'off',
   'no-extra-parens': 'off',
   'no-extra-semi': 'error',
