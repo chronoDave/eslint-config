@@ -1,7 +1,7 @@
 {
   "name": "@chronocide/eslint-config",
   "description": "Chrono's eslint config",
-  "version": "0.12.2",
+  "version": "0.13.0",
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
