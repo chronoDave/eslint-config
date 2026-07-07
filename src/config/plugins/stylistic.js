@@ -60,7 +60,7 @@ export const rules = format(key)({
   'no-trailing-spaces': 'error',
   'no-whitespace-before-property': 'error',
   'nonblock-statement-body-position': 'error',
-  'object-curly-newline': ['error', {
+  'object-curly-newline': ['warn', {
     multiline: true,
     minProperties: 4,
     consistent: true
